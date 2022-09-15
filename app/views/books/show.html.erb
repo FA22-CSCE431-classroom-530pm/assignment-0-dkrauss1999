@@ -1,8 +1,19 @@
 <p id="notice"><%= notice %></p>
+<% flash.each do |type, msg| %>
+  <div>
+    <%= msg %>
+  </div>
+<% end %>
 
 <p>
   <strong>Title:</strong>
   <%= @book.title %>
+  <strong>Author:</strong>
+  <%= @book.author %>
+  <strong>Price:</strong>
+  <%= @book.price %>
+  <strong>Date:</strong>
+  <%= @book.date %>
 </p>
 
 <%= link_to 'Edit', edit_book_path(@book) %> |
